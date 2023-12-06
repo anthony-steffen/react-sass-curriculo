@@ -1,3 +1,5 @@
+import Loading from '../img/loading.png';
+
 function Projects() {
   return (
     <section className="projects-container">
@@ -8,7 +10,7 @@ function Projects() {
         doloribus excepturi consectetur omnis ducimus explicabo,
         animi est id neque modi? Eveniet, alias?
       </p>
-      <a href="http://link-para-projetos-github" className="btn">
+      <a href={ Loading } className="btn">
         Ver Projetos
       </a>
     </section>

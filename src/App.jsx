@@ -1,4 +1,4 @@
-import MainContent from './components/MainContent';
+import MainContent from './components/Maincontent';
 import Sidebar from './components/Sidebar';
 
 import './styles/components/app.sass';
