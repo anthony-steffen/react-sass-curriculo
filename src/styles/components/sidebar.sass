@@ -1,0 +1,34 @@
+@use '../variables' as var
+@use '../mixins' as mix
+
+.sidebar
+  @include mix.center
+  justify-content: start
+  background-color: var.$bg-color
+  flex-direction: column
+  flex: 1 1 0
+  border-radius: var.$container-border-radius
+  position: relative
+
+  .avatar
+    @include mix.center
+
+  img
+    width: 50%
+    border-radius: var.$container-border-radius
+    position: relative
+    top: -3rem
+    margin-bottom: 2rem
+
+  .btn
+    @include mix.btn
+    margin: 1rem 0
+    &:hover
+      @include mix.btn-hover
+
+  // @media (max-width: 320px)
+  //   @include mix.center
+
+  //   background-color: var.$bg-color
+  //   flex-direction: column
+  //   border-radius: var.$container-border-radius

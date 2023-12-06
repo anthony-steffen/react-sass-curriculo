@@ -1,0 +1,41 @@
+@use 'variables' as var
+
+@mixin center
+    display: flex
+    justify-content: center
+    align-items: center
+
+@mixin btn
+    padding: .8rem 1.2rem
+    color: var.$text-color
+    background: var.$gradient
+    text-decoration: none
+    border-radius: 3rem
+
+@mixin social-btn
+    padding: .3em
+    background-color: var.$bg-color-secundary
+    border-radius: 50%
+    font-size: 2.5rem
+    @include center
+
+@mixin information-cards
+    display: flex
+    align-items: center
+    justify-content: start
+    gap: 0.7rem
+    padding: 0.5rem
+    margin-bottom: .1rem
+    border-bottom: 1px solid #444
+    width: 100%
+
+@mixin gradient-border
+    content: ""
+    background: var.$gradient
+    height: 3px
+    width: 40%
+
+@mixin btn-hover
+    transform: scale(1.1)
+    box-shadow: 0 0 10px var.$gradient
+    transition: all .2s ease-in-out

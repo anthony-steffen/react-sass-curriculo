@@ -1,0 +1,44 @@
+@use '../variables' as var
+@use '../mixins' as mix
+
+.social-networks
+    @include mix.center
+    margin-bottom: 2rem
+    gap: 1rem
+
+    .social-btn-linkedin
+        color: #0077b5
+        @include mix.social-btn
+
+    .social-btn-github
+        color: #f6f6f6
+        @include mix.social-btn
+
+    .social-btn-instagram
+        color: #e1306c
+        @include mix.social-btn
+
+    :hover
+        background: var.$gradient
+        > svg
+            color: var.$text-color
+
+    @media (max-width: 1280px)
+        .social-btn-linkedin
+            font-size: 2rem
+
+        .social-btn-github
+            font-size: 2rem
+
+        .social-btn-instagram
+            font-size: 2rem
+
+    @media (max-width: 1000px)
+        .social-btn-linkedin
+            font-size: 1.5rem
+
+        .social-btn-github
+            font-size: 1.5rem
+
+        .social-btn-instagram
+            font-size: 1.5rem
