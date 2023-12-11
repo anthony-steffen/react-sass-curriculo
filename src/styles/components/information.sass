@@ -4,10 +4,9 @@
 #information
     background-color: var.$bg-color-secundary
     padding: 1rem
-    margin-bottom: 2rem
-    text-align: left
-    width: 90%
+    margin-bottom: 1rem
     border-radius: var.$card-border-radius
+    width: 80%
 
     .info-card
         @include mix.center
@@ -20,12 +19,11 @@
 
     h3
         color: var.$text-color-secundary
-        font-size: 0.9rem
+        font-size: 1rem
         margin-bottom: .5rem
 
     p
         color: var.$text-color
-        font-size: 1rem
 
     svg
         background-color: var.$bg-color
@@ -42,3 +40,39 @@
 
     #email-icon
         color: #c17ceb
+
+@media (max-width: 1220px)
+    #information
+        width: 90%
+
+    .info-card
+        display: flex
+        flex-direction: column
+        text-align: center
+        gap: 0
+        padding-bottom: 0
+        margin-bottom: 0
+
+    //     @include mix.center
+    //     justify-content: start
+    //     gap: 1rem
+    //     padding-bottom: .8rem
+    //     margin-bottom: .8rem
+    //     border-bottom: 1px solid #444
+    //     width: 100%
+
+    // h3
+    //     color: var.$text-color-secundary
+    //     font-size: 0.9rem
+    //     margin-bottom: .5rem
+
+    // p
+    //     color: var.$text-color
+    //     font-size: 1
+
+    // svg
+    //     background-color: var.$bg-color
+    //     padding: 0.4rem
+    //     width: 2.5rem
+    //     height: 2.5rem
+    //     border-radius: var.$card-border-radius
