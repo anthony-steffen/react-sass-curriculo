@@ -1,10 +1,10 @@
+import { Link } from 'react-router-dom';
 import SocialNetworks from './SocialNetworks';
+import Information from './Information';
 
 import Avatar from '../img/anthony.jpg';
-import Loading from '../img/loading.png';
 
 import '../styles/components/sidebar.sass';
-import Information from './Information';
 
 function Sidebar() {
   return (
@@ -14,7 +14,12 @@ function Sidebar() {
       </div>
       <SocialNetworks />
       <Information />
-      <a href={ Loading } className="btn"><span>Download Currículo</span></a>
+      <Link
+        to="/react-sass-curriculo/download"
+        className="btn"
+      >
+        <span>Exibir Currículo</span>
+      </Link>
     </aside>
   );
 }
