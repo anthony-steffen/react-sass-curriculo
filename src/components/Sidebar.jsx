@@ -15,7 +15,7 @@ function Sidebar() {
       <SocialNetworks />
       <Information />
       <Link
-        to="/react-sass-curriculo/download"
+        to="/react-sass-curriculo/curriculo"
         className="btn"
       >
         <span>Exibir Currículo</span>

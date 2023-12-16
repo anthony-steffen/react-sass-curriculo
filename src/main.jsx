@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
         <Route path="/react-sass-curriculo" element={ <App /> } />
-        <Route path="/react-sass-curriculo/download" element={ <Curriculo /> } />
+        <Route path="/react-sass-curriculo/curriculo" element={ <Curriculo /> } />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
