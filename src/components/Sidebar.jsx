@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
 import SocialNetworks from './SocialNetworks';
 import Information from './Information';
+import pdfSrc from '../../resume.pdf';
 
 import Avatar from '../img/anthony.jpg';
 
@@ -14,12 +14,13 @@ function Sidebar() {
       </div>
       <SocialNetworks />
       <Information />
-      <Link
-        to="/react-sass-curriculo/curriculo"
+      <button
+        type="button"
         className="btn"
+        onClick={ () => (window.open(pdfSrc)) }
       >
         <span>Exibir Currículo</span>
-      </Link>
+      </button>
     </aside>
   );
 }
