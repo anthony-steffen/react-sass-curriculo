@@ -3,8 +3,7 @@
 Bem-vindo à página inicial do meu currículo, uma aplicação desenvolvida com React.js, Vite e Sass para proporcionar uma experiência visualmente atraente e informativa.
 
 ## Recursos Destacados
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" width="50" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" width="50"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" width="50" /> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" width="50"/>
 
 - **React.js e Vite:**
   Desenvolvido com React.js para criar uma interface reativa e eficiente, enquanto o Vite proporciona uma construção rápida para desenvolvimento ágil.
