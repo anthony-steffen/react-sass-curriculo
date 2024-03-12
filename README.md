@@ -1,4 +1,5 @@
 # React-Sass-Curriculo
+[![NPM License](https://img.shields.io/npm/l/license)](https://github.com/anthony-steffen/react-sass-curriculo/blob/main/LICENSE)
 
 Bem-vindo à página inicial do meu currículo, uma aplicação desenvolvida com React.js, Vite e Sass para proporcionar uma experiência visualmente atraente e informativa.
 
