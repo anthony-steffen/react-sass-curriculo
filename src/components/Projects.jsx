@@ -1,9 +1,26 @@
+import { useEffect, useState } from 'react';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
-import projects from '../data/projects';
+import { fallbackProjects, getProjects } from '../services/githubProjects';
 
 import '../styles/components/projects.sass';
 
 function Projects() {
+  const [projects, setProjects] = useState(fallbackProjects);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    let isMounted = true;
+
+    getProjects({ signal: controller.signal }).then((loadedProjects) => {
+      if (isMounted) setProjects(loadedProjects);
+    });
+
+    return () => {
+      isMounted = false;
+      controller.abort();
+    };
+  }, []);
+
   return (
     <section className="projects-container">
       <h2>Projetos</h2>
@@ -28,10 +45,12 @@ function Projects() {
                 <FaGithub />
                 Código
               </a>
-              <a href={ project.liveUrl } target="_blank" rel="noreferrer">
-                <FaExternalLinkAlt />
-                Demo
-              </a>
+              {project.liveUrl && (
+                <a href={ project.liveUrl } target="_blank" rel="noreferrer">
+                  <FaExternalLinkAlt />
+                  Demo
+                </a>
+              )}
             </div>
           </article>
         ))}
