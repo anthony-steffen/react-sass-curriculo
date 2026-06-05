@@ -1,60 +1,92 @@
-# React-Sass-Curriculo
+# React Sass Curriculo
+
 [![NPM License](https://img.shields.io/npm/l/license)](https://github.com/anthony-steffen/react-sass-curriculo/blob/main/LICENSE)
 
-Bem-vindo à página inicial do meu currículo, uma aplicação desenvolvida com React.js, Vite e Sass para proporcionar uma experiência visualmente atraente e informativa.
+Portfólio e currículo online desenvolvido com React, Vite e Sass. A página
+apresenta perfil profissional, contatos, tecnologias e projetos em uma interface
+responsiva.
 
-## Recursos Destacados
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" width="50" /> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" width="50"/>
+## Tecnologias
 
-- **React.js e Vite:**
-  Desenvolvido com React.js para criar uma interface reativa e eficiente, enquanto o Vite proporciona uma construção rápida para desenvolvimento ágil.
-  
-          
+- React
+- Vite
+- Sass
+- React Icons
+- GitHub Pages
 
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" width="50"/>
-- **Sass para Estilização:**
-  Utilizamos o Sass para estilização de componentes, aproveitando recursos avançados como mixins e variáveis para garantir uma aparência moderna e consistente à página.
+## Como Rodar Localmente
 
-          
-          
-## Principais Recursos
+Certifique-se de ter o Node.js instalado.
 
-- **Mixins e Variáveis Sass:**
-  Aproveitamos a poderosa capacidade do Sass para criar mixins e variáveis, simplificando a estilização e garantindo consistência visual em toda a aplicação.
+```bash
+git clone https://github.com/anthony-steffen/react-sass-curriculo.git
+cd react-sass-curriculo
+npm install
+npm run dev
+```
 
-- **Estilização Moderna:**
-  O uso de recursos avançados do Sass permite uma estilização moderna e flexível, tornando a página do currículo visualmente atraente e adaptável a diferentes dispositivos.
+Depois, acesse:
 
-## Como Iniciar
+```txt
+http://localhost:5173/react-sass-curriculo/
+```
 
-Certifique-se de ter o Node.js instalado em seu sistema antes de prosseguir.
+## Como Adicionar Projetos
 
-1. **Clone o repositório:**
-    ```bash
-    git clone https://github.com/seu-usuario/my-finance-app.git
-    cd my-finance-app
-    ```
+Os projetos ficam centralizados em:
 
-2. **Instale as dependências:**
-    ```bash
-    npm install
-    ```
+```txt
+src/data/projects.js
+```
 
-3. **Inicie o servidor de desenvolvimento:**
-    ```bash
-    npm run dev
-    ```
+Para adicionar um novo projeto, inclua um novo objeto no array:
 
-Acesse a aplicação em `http://localhost:3000` no seu navegador.
+```js
+{
+  id: 'nome-do-projeto',
+  title: 'Nome do Projeto',
+  status: 'Finalizado',
+  description: 'Resumo curto do que o projeto faz e quais problemas resolve.',
+  technologies: ['React', 'Node.js', 'Sass'],
+  repositoryUrl: 'https://github.com/seu-usuario/nome-do-projeto',
+  liveUrl: 'https://link-da-demo.com',
+}
+```
 
-## Contribuições
+## Onde Editar os Dados
 
-Contribuições são bem-vindas! Se encontrar problemas, bugs ou tiver sugestões de melhorias, abra uma issue ou envie um pull request.
+- Perfil principal: `src/data/profile.js`
+- Redes sociais: `src/data/socialLinks.js`
+- Tecnologias: `src/data/technologies.js`
+- Projetos: `src/data/projects.js`
 
-Agradecemos por usar o My-Finance-App!
+## Scripts Disponíveis
+
+```bash
+npm run dev
+npm run build
+npm run lint
+npm run preview
+npm run deploy
+```
+
+## Deploy
+
+O projeto está preparado para publicação no GitHub Pages com:
+
+```bash
+npm run deploy
+```
+
+O endereço configurado é:
+
+```txt
+https://anthony-steffen.github.io/react-sass-curriculo
+```
 
 ## Autor
 
 José Anthony Steffen de Oliveira
 
-[LinkedIn](https://www.linkedin.com/in/anthony-steffen-dev/)
+- [LinkedIn](https://www.linkedin.com/in/anthony-steffen-dev/)
+- [GitHub](https://github.com/anthony-steffen)
