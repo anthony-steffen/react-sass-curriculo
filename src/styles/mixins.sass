@@ -6,17 +6,26 @@
     align-items: center
 
 @mixin btn
-    padding: .8rem 1.2rem
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    gap: .55rem
+    padding: .8rem 1.1rem
     color: var.$text-color
     background: var.$gradient
+    border: 0
     text-decoration: none
-    border-radius: 3rem
+    border-radius: var.$card-border-radius
+    font-weight: 700
+    cursor: pointer
 
 @mixin social-btn
-    padding: .3em
+    width: 3rem
+    height: 3rem
     background-color: var.$bg-color-secundary
-    border-radius: 50%
-    font-size: 2.5rem
+    border: 1px solid var.$border-color
+    border-radius: var.$card-border-radius
+    font-size: 1.6rem
     @include center
 
 @mixin information-cards
@@ -33,9 +42,10 @@
     content: ""
     background: var.$gradient
     height: 3px
-    width: 40%
+    width: 4rem
+    border-radius: 999px
 
 @mixin btn-hover
-    transform: scale(1.1)
-    box-shadow: 0 0 10px var.$gradient
+    transform: translateY(-2px)
+    box-shadow: 0 12px 24px rgba(0, 0, 0, .24)
     transition: all .2s ease-in-out

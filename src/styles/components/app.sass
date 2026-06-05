@@ -2,14 +2,48 @@
 @use '../mixins' as mix
 
 .app
-  display: flex
-  flex-wrap: wrap
+  display: grid
+  grid-template-columns: minmax(280px, 360px) minmax(0, 1fr)
+  gap: 1.5rem
+  width: min(1180px, calc(100% - 2rem))
+  min-height: 100vh
+  margin: 0 auto
+  padding: 2rem 0 3rem
 
-  h1
-    width: 100%
+  .app-header
+    grid-column: 1 / -1
+    padding: 1rem 0 .5rem
+
+  .app-header p
+    color: var.$accent-color
+    font-size: .95rem
+    font-weight: 700
+    letter-spacing: 0
+    text-transform: uppercase
+    margin-bottom: .7rem
+
+  .app-header h1
     color: var.$text-color
-    font-size: 6vw
-    margin: 2rem 0 4rem 4rem
+    font-size: 4.5rem
+    line-height: 1
     background: var.$gradient
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
+
+  @media (max-width: 900px)
+    grid-template-columns: 1fr
+    padding-top: 1rem
+
+    .app-header h1
+      font-size: 3rem
+
+  @media (max-width: 520px)
+    width: min(100% - 1rem, 1180px)
+    gap: 1rem
+
+    .app-header
+      padding-left: .25rem
+      padding-right: .25rem
+
+    .app-header h1
+      font-size: 2.4rem

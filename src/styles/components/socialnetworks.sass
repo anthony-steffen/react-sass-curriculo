@@ -3,8 +3,9 @@
 
 .social-networks
     @include mix.center
-    margin-bottom: 2rem
-    gap: 1rem
+    width: 100%
+    margin-bottom: 1rem
+    gap: .75rem
 
     .social-btn-linkedin
         color: #0077b5
@@ -18,27 +19,28 @@
         color: #e1306c
         @include mix.social-btn
 
-    :hover
-        background: var.$gradient
+    a:hover
+        border-color: var.$accent-color
+        background: var.$bg-color
         > svg
-            color: var.$text-color
+            color: var.$accent-color
 
     @media (max-width: 1280px)
         .social-btn-linkedin
-            font-size: 2rem
+            font-size: 1.45rem
 
         .social-btn-github
-            font-size: 2rem
+            font-size: 1.45rem
 
         .social-btn-instagram
-            font-size: 2rem
+            font-size: 1.45rem
 
     @media (max-width: 1000px)
         .social-btn-linkedin
-            font-size: 1.5rem
+            font-size: 1.35rem
 
         .social-btn-github
-            font-size: 1.5rem
+            font-size: 1.35rem
 
         .social-btn-instagram
-            font-size: 1.5rem
+            font-size: 1.35rem

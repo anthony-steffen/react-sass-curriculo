@@ -1,3 +1,4 @@
+import { FaFilePdf } from 'react-icons/fa';
 import SocialNetworks from './SocialNetworks';
 import Information from './Information';
 import profile from '../data/profile';
@@ -20,6 +21,7 @@ function Sidebar() {
         className="btn"
         onClick={ () => (window.open(pdfSrc)) }
       >
+        <FaFilePdf />
         <span>{profile.resumeLabel}</span>
       </button>
     </aside>

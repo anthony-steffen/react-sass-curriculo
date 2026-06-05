@@ -3,33 +3,39 @@
 
 .sidebar
   @include mix.center
-  justify-content: start
+  justify-content: flex-start
   background-color: var.$bg-color
   flex-direction: column
-  flex: 1 1 0
   border-radius: var.$container-border-radius
-  position: relative
-  margin: 0 1rem 2rem 1rem
+  border: 1px solid var.$border-color
+  position: sticky
+  top: 2rem
+  align-self: start
+  padding: 1.5rem
+  min-width: 0
 
   .avatar
     @include mix.center
+    width: 100%
+    margin-bottom: 1.5rem
 
   img
-    width: 50%
+    width: min(100%, 14rem)
+    aspect-ratio: 1
+    object-fit: cover
     border-radius: var.$container-border-radius
-    position: relative
-    top: -3rem
-    margin-bottom: 2rem
+    border: 1px solid var.$border-color
 
   .btn
     @include mix.btn
-    margin: 1rem 0
+    width: 100%
+    margin-top: 1rem
+
     &:hover
       @include mix.btn-hover
 
-  // @media (max-width: 320px)
-  //   @include mix.center
+  @media (max-width: 900px)
+    position: static
 
-  //   background-color: var.$bg-color
-  //   flex-direction: column
-  //   border-radius: var.$container-border-radius
+  @media (max-width: 520px)
+    padding: 1rem
