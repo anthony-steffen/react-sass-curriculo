@@ -1,26 +1,28 @@
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
+import socialLinks from '../data/socialLinks';
 
 import '../styles/components/socialnetworks.sass';
 
-const socialNetworks = [
-  { name: 'Linkedin', url: 'https://www.linkedin.com/in/anthony-steffen-dev/', icon: <FaLinkedin /> },
-  { name: 'Github', url: 'https://github.com/anthony-steffen', icon: <FaGithub /> },
-  { name: 'Instagram', url: 'https://www.instagram.com/_anthony.steffen_/', icon: <FaInstagram /> },
-];
+const socialIcons = {
+  linkedin: <FaLinkedin />,
+  github: <FaGithub />,
+  instagram: <FaInstagram />,
+};
 
 function SocialNetworks() {
   return (
     <section className="social-networks">
-      {socialNetworks.map((network) => (
+      {socialLinks.map((network) => (
         <a
           href={ network.url }
-          className={ `social-btn-${network.name.toLowerCase()}` }
-          key={ network.name }
+          className={ `social-btn-${network.id}` }
+          key={ network.id }
           id={ network.name }
           target="_blank"
           rel="noreferrer"
+          aria-label={ network.name }
         >
-          {network.icon}
+          {socialIcons[network.id]}
         </a>
       ))}
     </section>

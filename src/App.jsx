@@ -1,18 +1,19 @@
 import MainContent from './components/Maincontent';
 import Sidebar from './components/Sidebar';
+import profile from './data/profile';
 
 import './styles/components/app.sass';
 
-// const BrowserRouter = createBrowserRouter([]);
 function App() {
   return (
-
     <div className="app">
-      <h1>Anthony Steffen</h1>
+      <header className="app-header">
+        <p>{profile.role}</p>
+        <h1>{profile.name}</h1>
+      </header>
       <Sidebar />
       <MainContent />
     </div>
-
   );
 }
 

@@ -8,28 +8,29 @@ import {
   DiDocker,
   DiPython,
 } from 'react-icons/di';
+import technologies from '../data/technologies';
 
 import '../styles/components/technologies.sass';
 
-const tectData = [
-  { id: 'html', name: 'HTML5', icon: <DiHtml5 /> },
-  { id: 'css', name: 'CSS3', icon: <DiCss3 /> },
-  { id: 'js', name: 'JavaScript', icon: <DiJsBadge /> },
-  { id: 'react', name: 'React', icon: <DiReact /> },
-  { id: 'node', name: 'Node.js', icon: <DiNodejs /> },
-  { id: 'mysql', name: 'MySQL', icon: <DiMysql /> },
-  { id: 'docker', name: 'Docker', icon: <DiDocker /> },
-  { id: 'python', name: 'Python', icon: <DiPython /> },
-];
+const technologyIcons = {
+  html: <DiHtml5 />,
+  css: <DiCss3 />,
+  js: <DiJsBadge />,
+  react: <DiReact />,
+  node: <DiNodejs />,
+  mysql: <DiMysql />,
+  docker: <DiDocker />,
+  python: <DiPython />,
+};
 
-function technologies() {
+function Technologies() {
   return (
     <section className="technologies-container">
       <h2>Tecnologias</h2>
       <div className="technologies-grid">
-        {tectData.map((tech) => (
+        {technologies.map((tech) => (
           <div className="technology-card" id={ tech.id } key={ tech.id }>
-            {tech.icon}
+            {technologyIcons[tech.id]}
             <div>
               <h3>{tech.name}</h3>
             </div>
@@ -40,4 +41,4 @@ function technologies() {
   );
 }
 
-export default technologies;
+export default Technologies;

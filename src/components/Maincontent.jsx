@@ -1,4 +1,4 @@
-import Aboout from './Aboout';
+import About from './About';
 import Projects from './Projects';
 import Technologies from './Technologies';
 
@@ -7,7 +7,7 @@ import '../styles/components/maincontent.sass';
 function MainContent() {
   return (
     <div className="main">
-      <Aboout />
+      <About />
       <Projects />
       <Technologies />
     </div>
