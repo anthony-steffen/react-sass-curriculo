@@ -39,19 +39,26 @@ Os projetos ficam centralizados em:
 src/data/projects.js
 ```
 
-Para adicionar um novo projeto, inclua um novo objeto no array:
+O app usa o nome do repositório para buscar dados públicos no GitHub e monta o
+card automaticamente. Para adicionar um novo projeto, inclua um objeto no array:
 
 ```js
 {
-  id: 'nome-do-projeto',
+  repository: 'nome-do-repositorio',
   title: 'Nome do Projeto',
   status: 'Finalizado',
   description: 'Resumo curto do que o projeto faz e quais problemas resolve.',
   technologies: ['React', 'Node.js', 'Sass'],
-  repositoryUrl: 'https://github.com/seu-usuario/nome-do-projeto',
   liveUrl: 'https://link-da-demo.com',
 }
 ```
+
+Campos como `title`, `description`, `technologies`, `status` e `liveUrl` são
+opcionais, mas funcionam como fallback quando a API do GitHub não retorna alguma
+informação.
+
+O usuário do GitHub usado na consulta fica na variável `githubOwner`, dentro do
+mesmo arquivo.
 
 ## Onde Editar os Dados
 
